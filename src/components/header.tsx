@@ -47,12 +47,6 @@ const StyledLink = styled(Link)`
     }
 `;
 
-const StyledLinkNavStyleLink = styled.a`
-    text-decoration: none;
-    font-size: 12px;
-    padding: 0 15px;
-`;
-
 const NavButton = styled.a`
     text-decoration: none;
     margin: 45px 15px;
