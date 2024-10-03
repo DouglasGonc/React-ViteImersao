@@ -1,0 +1,18 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+/* Estilos globais */
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+/* Outros estilos globais aqui */
+main{
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 40px;
+}

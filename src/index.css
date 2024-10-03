@@ -1,0 +1,57 @@
+:root {
+  /* Cores principais */
+  --color-primary: #F4511E; /* Laranja escuro */
+  --color-secondary: #FFCC80; /* Laranja claro */
+  --color-tertiary: #FF6F00; /* Amarelo forte */
+  --color-dark: #333333; /* Preto suave */
+  --color-light: #FFFFFF; /* Branco */
+
+  /* Cores neutras */
+  --color-gray-light: #F5F5F5; /* Cinza claro */
+  --color-gray: #9E9E9E; /* Cinza médio */
+  --color-gray-dark: #616161; /* Cinza escuro */
+
+  /* Cores de fundo */
+  --background-color-primary: #FFF8E1; /* Fundo bege claro */
+  --background-color-secondary: #FFF3E0; /* Fundo laranja claro */
+
+  /* Cores de texto */
+  --text-color-primary: #333333; /* Cor principal do texto */
+  --text-color-secondary: #9E9E9E; /* Cor secundária do texto */
+  --text-color-inverse: #FFFFFF; /* Texto em fundo escuro */
+
+  /* Cores para botões e links */
+  --button-color-primary: #eb4a36; /* Botão laranja escuro */
+  --button-color-hover: #e9351f; /* Botão laranja mais escuro */
+  --link-color: #F4511E; /* Links laranja */
+  --link-hover-color: #FF7043; /* Hover do link laranja */
+
+  /* Tipografia */
+  --font-primary: 'Poppins', sans-serif; /* Fonte principal */
+  --font-secondary: 'Roboto', sans-serif; /* Fonte secundária */
+  --font-button: 'Montserrat', san-serif; /* Fonte botão */
+  --font-size-base: 16px; /* Tamanho base de texto */
+  --font-size-large: 24px; /* Texto grande */
+  --font-size-small: 12px; /* Texto pequeno */
+  --font-weight-normal: 400; /* Peso normal */
+  --font-weight-bold: 700; /* Peso negrito */
+}
+
+body {
+  color: var(--text-color-primary);
+  font-family: var(--font-primary);
+}
+
+h1, h2, h3 {
+  color: var(--color-dark);
+  font-size: var(--font-size-large);
+}
+
+a {
+  color: var(--text-color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
