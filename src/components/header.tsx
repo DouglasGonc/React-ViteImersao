@@ -74,15 +74,15 @@ const Header: React.FC = () => {
                     </LogoH>
                     <Nav>
                         <StyledLink to="/">Home</StyledLink>
-                        <StyledLink to="/about">About</StyledLink>
-                        <a href="/">Search</a>
-                        <a href="/about">Contato</a>
+                        <StyledLink to="/sobre-nos">About</StyledLink>
+                        <StyledLink to="/sobre-nos">Search</StyledLink>
+                        <StyledLink to="/contato">Contato</StyledLink>
                     </Nav>
                 </section>
                 <section>
                     <div>
                     </div>
-                    <StyledLink to="/about">Sign In</StyledLink>
+                    <StyledLink to="/sobre-nos">Sign In</StyledLink>
                     <NavButton href="#">Sign Up</NavButton>
                 </section>
             </Headerflex>
