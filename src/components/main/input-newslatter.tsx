@@ -5,7 +5,7 @@ import FormEmail from './email-form'
 const FormContainer = styled.section`
 
     background-color: var(--button-color-primary);
-    border-radius: 30px;
+    border-radius: 20px;
 
     div{
         max-width: 900px;

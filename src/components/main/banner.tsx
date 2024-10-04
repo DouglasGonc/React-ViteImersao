@@ -6,7 +6,7 @@ const BannerContainer = styled.section`
     height: 439px;
     width: 1200px;
     
-    border-radius: 30px;
+    border-radius: 20px;
     background-image: url(/img/banner-test.jpg);
     background-size: cover;
 
