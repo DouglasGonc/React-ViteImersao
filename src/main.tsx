@@ -16,7 +16,7 @@ import ContactDetails from './pages/ContactDetails.tsx'
     {
       path: "/",
       element: <App />,
-      errorElement: <ErrorPage />,
+      // errorElement: <ErrorPage />,
       children: [
         {
           path: "/",

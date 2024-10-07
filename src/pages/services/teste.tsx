@@ -16,7 +16,7 @@ const UsuariosGrid: React.FC<UsuariosGridProps> = ({ usuarios }) => {
                         </li>
                     ))
                 ) : (
-                    <li>Nenhum usuário encontrado</li>
+                    <li>Nenhum usuário encontrado!</li>
                 )}
             </ul>
         </div>
