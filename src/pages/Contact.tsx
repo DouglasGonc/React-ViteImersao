@@ -114,13 +114,6 @@ const Contact: React.FC = () => {
     const [email, setEmail] = useState<string>('');
     const [message, setMessage] = useState<string>('');
 
-    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
-        console.log('Nome:', name);
-        console.log('Email:', email);
-        console.log('Mensagem:', message);
-    };
-
     function SendEmail(e: React.FormEvent<HTMLFormElement>){ // Previne o recarregamento de pagina
         e.preventDefault();
 
