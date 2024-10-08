@@ -55,7 +55,7 @@ const Formulario = styled.div`
     border: none;
     border-radius: 30px;
     padding: 40px;
-    margin: 0 0 0 70px;
+    margin: 20px 0 0 70px;
 
     .form{
         max-width: 600px;

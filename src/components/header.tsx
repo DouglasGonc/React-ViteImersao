@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import SearchIcon from '../icons/search-icon';
 
 const HeaderContainer = styled.header`
     background-color: #fff;
@@ -49,7 +50,7 @@ const StyledLink = styled(Link)`
 
 const NavButton = styled.a`
     text-decoration: none;
-    margin: 45px 15px;
+    margin: 45px 0px 45px 15px;
     font-size: 12px;
     background-color: var(--button-color-primary);
     color: #fff;
@@ -70,7 +71,8 @@ const Header: React.FC = () => {
             <Headerflex>
                 <section>
                     <LogoH>
-                        <img src="/img/Design-logo-vanda-sem-fundo.png" alt="logo" />
+                        {/* <img src="/img/Design-logo-vanda-sem-fundo.png" alt="logo" /> */}
+                        <h1>Logo</h1>
                     </LogoH>
                     <Nav>
                         <StyledLink to="/">Home</StyledLink>
@@ -80,8 +82,7 @@ const Header: React.FC = () => {
                     </Nav>
                 </section>
                 <section>
-                    <div>
-                    </div>
+                    <div><SearchIcon size={18} color="#4a4a4a" /></div>
                     <StyledLink to="/sobre-nos">Sign In</StyledLink>
                     <NavButton href="#">Sign Up</NavButton>
                 </section>

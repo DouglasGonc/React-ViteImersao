@@ -1,5 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import FacebookIcon from '../icons/facebook-icon';
+import { InstagramIcon } from '../icons/instagram-icon';
+import { XIcon } from '../icons/twitter-X-icon';
 
 const FooterContainer = styled.footer`
 `;
@@ -54,8 +57,10 @@ const Footer: React.FC = () => {
                         <img src="/img/Design-logo-vanda-sem-fundo.png" alt="logo" />
                     </LogoF>
                 </section>
-                <section>
-                    <h5>Aqui é para ter icones de rede social porem faço isso mais tarde</h5>
+                <section style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center', columnGap: '15px' }}>
+                    <FacebookIcon />
+                    <InstagramIcon />
+                    <XIcon />
                 </section>
             </FooterGrid1>
             <FooterGrid2>

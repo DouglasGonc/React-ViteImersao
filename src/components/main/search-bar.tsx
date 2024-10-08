@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import SearchIcon from './search-icon';
+import SearchIcon from '../../icons/search-icon';
 const SearchForm = styled.form`
     display: flex;
     align-items: center;
