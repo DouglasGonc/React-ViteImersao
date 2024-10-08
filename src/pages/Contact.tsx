@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-// import { Link } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ContainerContact = styled.section`
     display: flex;
@@ -120,53 +121,66 @@ const Contact: React.FC = () => {
         console.log('Mensagem:', message);
     };
 
-    function SendEmail(e){ // Previne o recarregamento de pagina
+    function SendEmail(e: React.FormEvent<HTMLFormElement>){ // Previne o recarregamento de pagina
         e.preventDefault();
 
         if(name === '' || email === '' || message === ''){
-            alert("Preencha todos os campos");
+            toast.error("Preencha todos os campos"); // Exibe a notificação de erro
             return;
         }
 
-        alert("Teste")
+        toast.success("Email enviado com sucesso!"); // Exibe a notificação de sucesso
     }
     
     return (
-        <ContainerContact>
-            <InfContact>
-                <h1>Hello, what's on your mind?</h1>
-                <p>Credibly administrate market positioning deliverables rather than clicks-and-mortar methodologies. Proactively formulate out-of-the-box technology with clicks-and-mortar testing procedures. Uniquely promote leveraged web-readiness for standards compliant value. Rapidiously pontificate cooperative mindshare via maintainable applications.</p>
-                <ConButton>Schedule a call</ConButton>
-            </InfContact>
-            <Formulario>
-                <form className="form" onSubmit={SendEmail}>
-                    <p>Nome</p>
-                    <input 
-                        className="input"
-                        type="text"
-                        onChange={(e) => setName(e.target.value)}
-                        value={name}
-                    />
-                    <p>Email</p>
-                    <input 
-                        className="input"
-                        type="email"
-                        onChange={(e) => setEmail(e.target.value)}
-                        value={email}
-                    />
-                    <p>Mensagem</p>
-                    <textarea 
-                        className="textarea"
-                        onChange={(e) => setMessage(e.target.value)}
-                        value={message}
-                    />
+        <>
+            <ContainerContact>
+                <InfContact>
+                    <h1>Hello, what's on your mind?</h1>
+                    <p>Credibly administrate market positioning deliverables rather than clicks-and-mortar methodologies. Proactively formulate out-of-the-box technology with clicks-and-mortar testing procedures. Uniquely promote leveraged web-readiness for standards compliant value. Rapidiously pontificate cooperative mindshare via maintainable applications.</p>
+                    <ConButton>Schedule a call</ConButton>
+                </InfContact>
+                <Formulario>
+                    <form className="form" onSubmit={SendEmail}>
+                        <p>Nome</p>
+                        <input 
+                            className="input"
+                            type="text"
+                            onChange={(e) => setName(e.target.value)}
+                            value={name}
+                        />
+                        <p>Email</p>
+                        <input 
+                            className="input"
+                            type="email"
+                            onChange={(e) => setEmail(e.target.value)}
+                            value={email}
+                        />
+                        <p>Mensagem</p>
+                        <textarea 
+                            className="textarea"
+                            onChange={(e) => setMessage(e.target.value)}
+                            value={message}
+                        />
 
-                    <div>
-                        <input className="button" type="submit" value="Enviar" />
-                    </div>
-                </form>
-            </Formulario>
-        </ContainerContact>
+                        <div>
+                            <input className="button" type="submit" value="Enviar" />
+                        </div>
+                    </form>
+                </Formulario>
+            </ContainerContact>
+            <ToastContainer
+                position="bottom-center" // Centraliza horizontalmente e coloca no fim da tela verticalmente
+                autoClose={5000} // Tempo que o toast fica visível (opcional)
+                hideProgressBar={false} // Esconde ou mostra a barra de progresso
+                newestOnTop={false} // Define se o toast mais recente aparece no topo
+                closeOnClick // Fecha o toast ao clicar nele
+                rtl={false} // Define a direção do texto, se precisar de suporte para RTL (direita para esquerda)
+                pauseOnFocusLoss // Pausa o timer ao perder o foco (ex. mudar de aba)
+                draggable // Permite arrastar o toast
+                pauseOnHover // Pausa o timer ao passar o mouse sobre o toast
+            />
+        </>
     );
 };
 

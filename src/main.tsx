@@ -9,14 +9,13 @@ import Home from './pages/Home.tsx'
 import About from './pages/About.tsx'
 import ErrorPage from './pages/ErrorPage.tsx'
 import Contact from './pages/Contact.tsx'
-import ContactDetails from './pages/ContactDetails.tsx'
 
   
   const router = createBrowserRouter([
     {
       path: "/",
       element: <App />,
-      // errorElement: <ErrorPage />,
+      errorElement: <ErrorPage />,
       children: [
         {
           path: "/",
