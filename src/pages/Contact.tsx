@@ -54,6 +54,7 @@ const Formulario = styled.div`
     border: none;
     border-radius: 30px;
     padding: 40px;
+    margin: 0 0 0 70px;
 
     .form{
         max-width: 600px;
@@ -113,11 +114,22 @@ const Contact: React.FC = () => {
     const [message, setMessage] = useState<string>('');
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    console.log('Nome:', name);
-    console.log('Email:', email);
-    console.log('Mensagem:', message);
+        event.preventDefault();
+        console.log('Nome:', name);
+        console.log('Email:', email);
+        console.log('Mensagem:', message);
     };
+
+    function SendEmail(e){ // Previne o recarregamento de pagina
+        e.preventDefault();
+
+        if(name === '' || email === '' || message === ''){
+            alert("Preencha todos os campos");
+            return;
+        }
+
+        alert("Teste")
+    }
     
     return (
         <ContainerContact>
@@ -127,32 +139,32 @@ const Contact: React.FC = () => {
                 <ConButton>Schedule a call</ConButton>
             </InfContact>
             <Formulario>
-            <form className="form" onSubmit={handleSubmit}>
-                <p>Nome</p>
-                <input 
-                    className="input"
-                    type="text"
-                    onChange={(e) => setName(e.target.value)}
-                    value={name}
-                />
-                <p>Email</p>
-                <input 
-                    className="input"
-                    type="email"
-                    onChange={(e) => setEmail(e.target.value)}
-                    value={email}
-                />
-                <p>Mensagem</p>
-                <textarea 
-                    className="textarea"
-                    onChange={(e) => setMessage(e.target.value)}
-                    value={message}
-                />
+                <form className="form" onSubmit={SendEmail}>
+                    <p>Nome</p>
+                    <input 
+                        className="input"
+                        type="text"
+                        onChange={(e) => setName(e.target.value)}
+                        value={name}
+                    />
+                    <p>Email</p>
+                    <input 
+                        className="input"
+                        type="email"
+                        onChange={(e) => setEmail(e.target.value)}
+                        value={email}
+                    />
+                    <p>Mensagem</p>
+                    <textarea 
+                        className="textarea"
+                        onChange={(e) => setMessage(e.target.value)}
+                        value={message}
+                    />
 
-                <div>
-                    <input className="button" type="submit" value="Enviar" />
-                </div>
-            </form>
+                    <div>
+                        <input className="button" type="submit" value="Enviar" />
+                    </div>
+                </form>
             </Formulario>
         </ContainerContact>
     );
