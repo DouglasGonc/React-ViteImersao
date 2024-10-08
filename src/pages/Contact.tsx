@@ -1,21 +1,160 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import styled from 'styled-components';
+// import { Link } from 'react-router-dom';
+
+const ContainerContact = styled.section`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    div{
+        flex: 1 1 0%;
+    }
+`;
+
+const InfContact = styled.div`
+
+
+    h1{
+        margin: 0 0 20px 0;
+        font-size: 42px;
+        font-weight: 600;
+        color: #000;
+        text-transform: none;
+    }
+
+    p{
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        unicode-bidi: isolate;
+        margin: 0 0 50px 0;
+    }
+`;
+
+const ConButton = styled.a`
+    text-decoration: none;
+    font-size: 12px;
+    background-color: var(--button-color-primary);
+    color: #fff;
+    
+    padding: 10px 30px;
+    border-radius: 30px;
+
+    &:hover{
+        background-color: var(--button-color-hover);
+        color: #fff;
+    }
+`;
+
+const Formulario = styled.div`
+    background-color: var(--button-color-primary);
+    border: none;
+    border-radius: 30px;
+    padding: 40px;
+
+    .form{
+        max-width: 600px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    p{
+        color: #fff;
+        margin-bottom: 7px;
+    }
+    .input{
+        margin-bottom: 25px;
+        width: 100%;
+        height: 34px;
+        border-radius: 30px;
+        border: 1px solid #fff;
+        background-color: transparent;
+        padding: 0 8px;
+    }
+    .textarea{
+        margin-bottom: 14px;
+        border-radius: 30px;
+        border: 1px solid #fff;
+        background-color: transparent;
+        padding: 8px;
+        height: 94px;
+        resize: none;
+    }
+    div{
+        display: flex;
+        justify-content: center;
+    }
+    .button{
+        width: 200px;
+        height: 40px;
+        border-radius: 30px;
+        border: 1px solid yellow;
+        cursor: pointer;
+        background-color: yellow;
+        font-size: 18px;
+        transition: background-color, transform 0.8s;
+    }
+
+    .button:hover{
+        border: 1px solid #fff;
+        background-color: transparent;
+        color: #fff;
+        transform: scale(1.01);
+    }
+`;
 
 const Contact: React.FC = () => {
+
+    const [name, setName] = useState<string>(''); // Definindo os tipos para TypeScript
+    const [email, setEmail] = useState<string>('');
+    const [message, setMessage] = useState<string>('');
+
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    console.log('Nome:', name);
+    console.log('Email:', email);
+    console.log('Mensagem:', message);
+    };
+    
     return (
-        <>
-            <h1>Contato</h1>
-            <p>Esta é a página de contato.</p>
-            <p>
-                <Link to="/contato/1">Forma de contato 1</Link>
-            </p>
-            <p>
-                <Link to="/contato/2">Forma de contato 2</Link>
-            </p>
-            <p>
-                <Link to="/contato/3">Forma de contato 3</Link>
-            </p>
-        </>
+        <ContainerContact>
+            <InfContact>
+                <h1>Hello, what's on your mind?</h1>
+                <p>Credibly administrate market positioning deliverables rather than clicks-and-mortar methodologies. Proactively formulate out-of-the-box technology with clicks-and-mortar testing procedures. Uniquely promote leveraged web-readiness for standards compliant value. Rapidiously pontificate cooperative mindshare via maintainable applications.</p>
+                <ConButton>Schedule a call</ConButton>
+            </InfContact>
+            <Formulario>
+            <form className="form" onSubmit={handleSubmit}>
+                <p>Nome</p>
+                <input 
+                    className="input"
+                    type="text"
+                    onChange={(e) => setName(e.target.value)}
+                    value={name}
+                />
+                <p>Email</p>
+                <input 
+                    className="input"
+                    type="email"
+                    onChange={(e) => setEmail(e.target.value)}
+                    value={email}
+                />
+                <p>Mensagem</p>
+                <textarea 
+                    className="textarea"
+                    onChange={(e) => setMessage(e.target.value)}
+                    value={message}
+                />
+
+                <div>
+                    <input className="button" type="submit" value="Enviar" />
+                </div>
+            </form>
+            </Formulario>
+        </ContainerContact>
     );
 };
 

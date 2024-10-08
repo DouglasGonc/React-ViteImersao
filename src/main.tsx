@@ -30,10 +30,6 @@ import ContactDetails from './pages/ContactDetails.tsx'
           path: "contato",
           element: <Contact />
         },
-        {
-          path: "Contato/:id",
-          element: <ContactDetails />
-        },
       ]
     }
   ])

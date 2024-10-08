@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import SearchBar from "./search-bar";
-import SelectDropdown from "./select-dropdown";
-import LibraryGrid from "./library-grid";
+// import SearchBar from "./search-bar";
+// import SelectDropdown from "./select-dropdown";
+// import LibraryGrid from "./library-grid";
 
 const ContainerGrid = styled.div`
     /* padding: 60px 0;
