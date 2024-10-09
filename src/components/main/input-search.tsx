@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import SearchIcon from '../../icons/search-icon';
 import { useState } from 'react';
 
-// Define o tipo das props para InputBar
 interface InputBarProps {
     inputOpen: boolean;
 }
