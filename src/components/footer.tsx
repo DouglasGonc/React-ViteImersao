@@ -9,17 +9,21 @@ const FooterContainer = styled.footer`
 
 const FooterGrid1 = styled.div`
     margin: 0 auto;
-    width: 1200px;
+    max-width: 1200px;
     padding: 60px 40px 41px 40px;
     
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 768px){
+        grid-template-columns: 1fr;
+    }
 `;
 
 const FooterGrid2 = styled.div`
     margin: 0 auto;
-    width: 1200px;
+    max-width: 1200px;
     padding: 0 40px;
     
     display: grid;
@@ -33,6 +37,10 @@ const FooterGrid2 = styled.div`
     li{
         padding-bottom: 13px;
     }
+
+    @media (max-width: 768px){
+        grid-template-columns: 1fr 1fr;
+    }
 `;
 const LogoF = styled.div`
     padding: 0 60px 0 0;
@@ -44,7 +52,7 @@ const LogoF = styled.div`
 `;
 const FooterGrid3 = styled.div`
     margin: 0 auto;
-    width: 1200px;
+    max-width: 1200px;
     padding: 30px 40px 60px 40px;
 `;
 

@@ -11,6 +11,10 @@ const ContainerContact = styled.section`
     div{
         flex: 1 1 0%;
     }
+
+    @media (max-width: 768px){
+        flex-direction: column;
+    }
 `;
 
 const InfContact = styled.div`

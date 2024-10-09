@@ -10,7 +10,7 @@ const HeaderContainer = styled.header`
 
 const Headerflex = styled.div`
     margin: 0 auto;
-    width: 1200px;
+    max-width: 1200px;
     padding: 0 40px;
 
     display: flex;
