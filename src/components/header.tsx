@@ -24,13 +24,13 @@ const Headerflex = styled.div`
     }
 
     @media (max-width: 768px) {
-        .secLeft{
+        .secLeft {
             width: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        .secReght{
+        .secReght {
             display: none;
         }
     }
@@ -45,7 +45,7 @@ const LogoH = styled.div`
     }
 `;
 
-const Nav = styled.nav`
+const Nav = styled.nav<{ open: boolean }>` // Adicionamos a tipagem aqui
     display: flex;
     justify-content: space-around;
 
