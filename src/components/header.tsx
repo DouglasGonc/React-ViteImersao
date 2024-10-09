@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import SearchIcon from '../icons/search-icon';
+import LoginBar from './main/NavSing-InUp';
 
 // Estilos
 const HeaderContainer = styled.header`
@@ -77,22 +77,6 @@ const StyledLink = styled(Link)`
     }
 `;
 
-const NavButton = styled.a`
-    text-decoration: none;
-    margin: 45px 0px 45px 15px;
-    font-size: 12px;
-    background-color: var(--button-color-primary);
-    color: #fff;
-    font-weight: bold;
-    padding: 10px 30px;
-    border-radius: 30px;
-
-    &:hover {
-        background-color: var(--button-color-hover);
-        color: #fff;
-    }
-`;
-
 // Estilos para o ícone do menu hamburguer
 const HamburgerIcon = styled.div`
     display: none;
@@ -145,9 +129,7 @@ const Header: React.FC = () => {
                     </div>
                 </section>
                 <section className='secReght'>
-                    <div><SearchIcon size={18} color="#4a4a4a" /></div>
-                    <StyledLink to="/sobre-nos">Sign In</StyledLink>
-                    <NavButton href="#">Sign Up</NavButton>
+                    <LoginBar />
                 </section>
             </Headerflex>
         </HeaderContainer>

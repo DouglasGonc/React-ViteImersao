@@ -110,6 +110,10 @@ const Formulario = styled.div`
         color: #fff;
         transform: scale(1.01);
     }
+    @media (max-width: 768px) {
+        width: calc(100% - 80px);
+        margin: 40px;
+    }
 `;
 
 const Contact: React.FC = () => {
