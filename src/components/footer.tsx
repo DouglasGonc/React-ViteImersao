@@ -21,14 +21,19 @@ const FooterGrid1 = styled.div`
     }
 `;
 
-const FooterGrid2 = styled.div`
+const FooterFlex2 = styled.div`
     margin: 0 auto;
     max-width: 1200px;
     padding: 0 40px;
     
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+
+    flex-wrap: wrap;
+    div{
+        flex: 1 1 25%
+    }
 
     ul{
         list-style-type: none;
@@ -39,7 +44,10 @@ const FooterGrid2 = styled.div`
     }
 
     @media (max-width: 768px){
-        grid-template-columns: 1fr 1fr;
+
+        div{
+            flex: 1 1 50%;
+        }
     }
 `;
 const LogoF = styled.div`
@@ -71,36 +79,36 @@ const Footer: React.FC = () => {
                     <XIcon />
                 </section>
             </FooterGrid1>
-            <FooterGrid2>
-                <section>
+            <FooterFlex2>
+                <div>
                     <ul>
                         <li><a href="#">Presentations</a></li>
                         <li><a href="#">Professionals</a></li>
                         <li><a href="#">Stores</a></li>
                     </ul>
-                </section>
-                <section>
+                </div>
+                <div>
                     <ul>
                         <li><a href="#">Workshops</a></li>
                         <li><a href="#">Webinars</a></li>
                         <li><a href="#">Local Meetups</a></li>
                     </ul>
-                </section>
-                <section>
+                </div>
+                <div>
                     <ul>
                         <li><a href="#">Our Initiatives</a></li>
                         <li><a href="#">Giving Back</a></li>
                         <li><a href="#">Communities</a></li>
                     </ul>
-                </section>
-                <section>
+                </div>
+                <div>
                     <ul>
                         <li><a href="#">Contact Form</a></li>
                         <li><a href="#">Work With Us</a></li>
                         <li><a href="#">Visit Us</a></li>
                     </ul>
-                </section>
-            </FooterGrid2>
+                </div>
+            </FooterFlex2>
             <FooterGrid3>Made by Unbound Studio in Guatemala City.</FooterGrid3>
         </FooterContainer>
     );
