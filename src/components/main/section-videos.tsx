@@ -26,6 +26,10 @@ const VideoGrid = styled.div`
         grid-template-columns: repeat(2, 1fr);
         row-gap: 40px;
     }
+    @media (max-width: 500px) {
+        grid-template-columns: 1fr;
+        padding: 0 40px;
+    }
 `;
 
 const SectionVideos: React.FC = () => {
