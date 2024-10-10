@@ -83,6 +83,7 @@ const Formulario = styled.div`
     .textarea{
         margin-bottom: 14px;
         border-radius: 30px;
+        width: 100%;
         border: 1px solid #fff;
         background-color: transparent;
         padding: 8px;
@@ -118,19 +119,19 @@ const Formulario = styled.div`
 
 const Contact: React.FC = () => {
 
-    const [name, setName] = useState<string>(''); // Definindo os tipos para TypeScript
+    const [name, setName] = useState<string>('');
     const [email, setEmail] = useState<string>('');
     const [message, setMessage] = useState<string>('');
 
-    function SendEmail(e: React.FormEvent<HTMLFormElement>){ // Previne o recarregamento de pagina
+    function SendEmail(e: React.FormEvent<HTMLFormElement>){
         e.preventDefault();
 
         if(name === '' || email === '' || message === ''){
-            toast.error("Preencha todos os campos"); // Exibe a notificação de erro
+            toast.error("Preencha todos os campos");
             return;
         }
 
-        toast.success("Email enviado com sucesso!"); // Exibe a notificação de sucesso
+        toast.success("Email enviado com sucesso!");
     }
     
     return (
@@ -171,15 +172,15 @@ const Contact: React.FC = () => {
                 </Formulario>
             </ContainerContact>
             <ToastContainer
-                position="bottom-center" // Centraliza horizontalmente e coloca no fim da tela verticalmente
-                autoClose={5000} // Tempo que o toast fica visível (opcional)
-                hideProgressBar={false} // Esconde ou mostra a barra de progresso
-                newestOnTop={false} // Define se o toast mais recente aparece no topo
-                closeOnClick // Fecha o toast ao clicar nele
-                rtl={false} // Define a direção do texto, se precisar de suporte para RTL (direita para esquerda)
-                pauseOnFocusLoss // Pausa o timer ao perder o foco (ex. mudar de aba)
-                draggable // Permite arrastar o toast
-                pauseOnHover // Pausa o timer ao passar o mouse sobre o toast
+                position="bottom-center"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
             />
         </>
     );

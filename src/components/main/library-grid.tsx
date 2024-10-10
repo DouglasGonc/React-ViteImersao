@@ -13,8 +13,6 @@ const LibraryGrid: React.FC = () => {
     return (
         <ContainerLibrery>
             <RecipesItems />
-            <RecipesItems />
-            <RecipesItems />
         </ContainerLibrery>
     );
 };

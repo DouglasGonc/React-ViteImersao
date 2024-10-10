@@ -3,35 +3,66 @@ import styled from 'styled-components';
 
 const BannerContainer = styled.section`
     display: flex;
-    height: 439px;
-    width: 1200px;
-    
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    max-width: 1200px;
+    min-height: 300px;
     border-radius: 20px;
     background-image: url(/img/banner-test.jpg);
     background-size: cover;
+    background-position: center;
 
     .column1 {
-        width: 510px;
-        padding-left: 70px;
-        margin: 70px 0;
+        flex: 1;
+        padding-left: 5%;
+        margin: 50px 0;
     }
 
     .column2 {
-        width: 580px;
-        padding-left: 70px;
-        margin: 70px 0;
+        flex: 1;
+        padding-left: 5%;
+        margin: 50px 0;
     }
 
     h1 {
-        font-size: 52px;
-        line-height: 62.4px;
+        font-size: 3vw; /* Ajusta o tamanho do texto conforme a largura da tela */
+        line-height: 1.2em;
         color: #fff;
     }
 
     p {
         color: #fff;
-        font-size: 18px;
+        font-size: 1.5vw;
         margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+
+        h1 {
+            font-size: 5vw;
+        }
+
+        p {
+            font-size: 3vw;
+        }
+
+        .column1, .column2 {
+            width: 100%;
+            padding-left: 0;
+            text-align: center;
+        }
+    }
+
+    @media (max-width: 480px) {
+        h1 {
+            font-size: 6vw;
+        }
+
+        p {
+            font-size: 4vw;
+        }
     }
 `;
 

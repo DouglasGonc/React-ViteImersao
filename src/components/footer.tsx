@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import FacebookIcon from '../icons/facebook-icon';
 import { InstagramIcon } from '../icons/instagram-icon';
 import { XIcon } from '../icons/twitter-X-icon';
+import ScreenSize from '../assets/monitorador-screen';
 
 const FooterContainer = styled.footer`
 `;
@@ -110,6 +111,8 @@ const Footer: React.FC = () => {
                 </div>
             </FooterFlex2>
             <FooterGrid3>Made by Unbound Studio in Guatemala City.</FooterGrid3>
+
+            <ScreenSize />
         </FooterContainer>
     );
 };

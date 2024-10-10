@@ -14,7 +14,6 @@ const RecipesItems: React.FC = () => {
     return (
         <BoxGrid> 
             <img src="https://via.placeholder.com/300x160" alt="Thumbnail"/>
-        
         </BoxGrid>
     );
 };
