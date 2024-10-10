@@ -58,8 +58,8 @@ const Button = styled.button`
         border-radius: 0 30px 30px 0;
         padding: 15px 2px;
     }
-    @media (max-width: 400px) {
-        background-color: red;
+    @media (max-width: 410px) {
+        background-color: green;
     }
 `;
 
