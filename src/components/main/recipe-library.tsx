@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import SearchBar from "./search-bar";
-import SelectDropdown from "./select-dropdown";
-import RecipesItems from "./recipe-items";
+// import SearchBar from "./search-bar";
+// import SelectDropdown from "./select-dropdown";
+// import RecipesItems from "./recipe-items";
 
 const ContainerLibrary = styled.section`
     display: flex;
