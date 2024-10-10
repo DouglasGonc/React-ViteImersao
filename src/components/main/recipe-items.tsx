@@ -6,6 +6,7 @@ const BoxGrid = styled.div`
 
     img{
         border-radius: 30px;
+        width: 100%;
     }
     
 `;
