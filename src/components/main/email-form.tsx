@@ -58,13 +58,16 @@ const Button = styled.button`
         border-radius: 0 30px 30px 0;
         padding: 15px 2px;
     }
+    @media (max-width: 413px) {
+        background-color: red;
+    }
 `;
 
 const FormEmail: React.FC = () => {
     return (
         <FormContainer>
             <Input type="email" placeholder="Email Address" />
-            <Button>Subscribe</Button>
+            <Button>Enviar</Button>
         </FormContainer>
     );
 };
