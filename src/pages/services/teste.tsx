@@ -1,10 +1,39 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { supabase } from './supabaseClient'; // Certifique-se de que o caminho está correto
 
-interface UsuariosGridProps {
-    usuarios: Array<{ id: number; Nome: string; 'E-mail': string }>;
+interface Usuario {
+    id: number;
+    Nome: string;
+    'E-mail': string;
 }
 
-const UsuariosGrid: React.FC<UsuariosGridProps> = ({ usuarios }) => {
+const UsuariosGrid: React.FC = () => {
+    const [usuarios, setUsuarios] = useState<Usuario[]>([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        // Função para buscar os usuários
+        const fetchUsuarios = async () => {
+            const { data, error } = await supabase
+                .from('usuarios') // Certifique-se que o nome da tabela está correto
+                .select('*');
+
+            if (error) {
+                console.error("Erro ao buscar usuários:", error.message);
+            } else {
+                setUsuarios(data || []); // Atualizando o estado com os dados recebidos
+            }
+
+            setLoading(false); // Desativa o estado de carregamento
+        };
+
+        fetchUsuarios(); // Chama a função para buscar os usuários ao carregar o componente
+    }, []);
+
+    if (loading) {
+        return <div>Carregando...</div>; // Exibe um carregamento enquanto os dados estão sendo buscados
+    }
+
     return (
         <div>
             <h2>Lista de Usuários</h2>

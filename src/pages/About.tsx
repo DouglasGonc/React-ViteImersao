@@ -1,4 +1,5 @@
 import React from 'react';
+import UsuariosGrid from './services/teste';
 
 const About: React.FC = () => {
     return (
@@ -8,26 +9,11 @@ const About: React.FC = () => {
             <br />
             <br />
             <br />
+            <hr />
             <br />
+            <UsuariosGrid />
             <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
+            <hr />
             <br />
         </>
     );
