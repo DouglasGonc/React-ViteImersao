@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import SearchIcon from '../../icons/search-icon';
+import SearchIcon from '../../assets/icons/search-icon';
 import { useState } from 'react';
 
 interface InputBarProps {

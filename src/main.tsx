@@ -9,6 +9,7 @@ import Home from './pages/Home.tsx'
 import About from './pages/About.tsx'
 import ErrorPage from './pages/ErrorPage.tsx'
 import Contact from './pages/Contact.tsx'
+import Recipe from './pages/Recipe.tsx'
 
   
   const router = createBrowserRouter([
@@ -28,6 +29,10 @@ import Contact from './pages/Contact.tsx'
         {
           path: "contato",
           element: <Contact />
+        },
+        {
+          path: "recipe",
+          element: <Recipe />
         },
       ]
     }

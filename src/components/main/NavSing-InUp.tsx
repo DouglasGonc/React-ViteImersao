@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import InputSearch from './input-search';
+import ButtonGlobal from '../common/button-global';
 
 const ContLogin = styled.div`
     margin: 45px 0px 45px 15px;
@@ -7,22 +8,6 @@ const ContLogin = styled.div`
     align-items: center;
 `;
 
-const NavButton = styled.a`
-    text-decoration: none;
-    margin: 0 0 0 15px;
-    font-size: 12px;
-    background-color: var(--button-color-primary);
-    border: 1px solid var(--button-color-primary);
-    color: #fff;
-    font-weight: bold;
-    padding: 8px 30px;
-    border-radius: 30px;
-
-    &:hover {
-        background-color: var(--button-color-hover);
-        color: #fff;
-    }
-`;
 const StyledA = styled.a`
     text-decoration: none;
     font-size: 12px;
@@ -43,7 +28,7 @@ const LoginBar = () => {
             <ContLogin>
                 <InputSearch/>
                 <StyledA href='#'>Sign In</StyledA>
-                <NavButton href="#">Sign Up</NavButton>
+                <ButtonGlobal text="Sign Up" toOrHref="/" fontSize="12px"/>
             </ContLogin>
     );
 };

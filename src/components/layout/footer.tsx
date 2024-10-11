@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import FacebookIcon from '../icons/facebook-icon';
-import { InstagramIcon } from '../icons/instagram-icon';
-import { XIcon } from '../icons/twitter-X-icon';
-import ScreenSize from '../assets/monitorador-screen';
+import FacebookIcon from '../../assets/icons/facebook-icon';
+import { InstagramIcon } from '../../assets/icons/instagram-icon';
+import { XIcon } from '../../assets/icons/twitter-X-icon';
+import ScreenSize from '../../assets/monitorador-screen';
 
 const FooterContainer = styled.footer`
 `;

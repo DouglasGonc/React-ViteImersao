@@ -16,3 +16,13 @@ main{
   max-width: 1200px;
   padding: 0 40px;
 }
+@media only screen and (min-width: 640px) and (max-width: 959px) {
+  main{
+    padding: 0 30px;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 639px) {
+  main{
+    padding: 0 15px;
+  }
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import Header from '../components/header';
-import Footer from '../components/footer';
+import Header from '../components/layout/header';
+import Footer from '../components/layout/footer';
 import { Link } from 'react-router-dom';
 
 const Error404 = styled.main`

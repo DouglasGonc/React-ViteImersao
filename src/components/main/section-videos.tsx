@@ -28,7 +28,8 @@ const VideoGrid = styled.div`
     }
     @media (max-width: 500px) {
         grid-template-columns: 1fr;
-        padding: 0 40px;
+        width: 100%;
+        height: auto;
     }
 `;
 

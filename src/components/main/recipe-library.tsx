@@ -8,7 +8,7 @@ const ContainerLibrary = styled.section`
     display: flex;
     margin: 60px 0;
 
-    @media (max-width: 767px) {
+    @media (max-width: 959px) {
         flex-direction: column;
         row-gap: 40px;
 
@@ -22,17 +22,7 @@ const Sidebar = styled.div`
 
     background-color: blue;
 
-    @media (max-width: 1280px) {
-        background-color: gray;
-
-
-    }
-    @media (max-width: 991px) {
-        background-color: gray;
-
-
-    }
-    @media (max-width: 767px) {
+    @media (max-width: 959px) {
         width: 100%;
 
     }
@@ -40,8 +30,6 @@ const Sidebar = styled.div`
 
 const Content = styled.div`
     width: 100%;
-
-    background-color: red;
 `;
 
 const ContentGrid = styled.div`
@@ -49,7 +37,10 @@ const ContentGrid = styled.div`
     grid-template-columns: 1fr 1fr 1fr;
     gap: 40px;
 
-    @media (max-width: 991px) {
+    @media (max-width: 959px) {
+        gap: 30px;
+    }
+    @media (max-width: 639px) {
         grid-template-columns: 1fr 1fr;
     }
     @media (max-width: 500px) {
@@ -57,7 +48,7 @@ const ContentGrid = styled.div`
 
         div{
             margin: 0 auto;
-            width: 300px;
+            width: 100%;
         }
     }
 `;

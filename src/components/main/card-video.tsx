@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import PlayIcon from "../../icons/play-icon";
+import PlayIcon from "../../assets/icons/play-icon";
 
 const Card = styled.a`
     position: relative;

@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import LoginBar from './main/NavSing-InUp';
+import LoginBar from '../main/NavSing-InUp';
 
-// Estilos
 const HeaderContainer = styled.header`
     background-color: #fff;
     color: #000;
@@ -77,7 +76,6 @@ const StyledLink = styled(Link)`
     }
 `;
 
-// Estilos para o ícone do menu hamburguer
 const HamburgerIcon = styled.div`
     display: none;
     cursor: pointer;
@@ -98,12 +96,11 @@ const HamburgerIcon = styled.div`
     }
 `;
 
-// Componente principal
 const Header: React.FC = () => {
-    const [menuOpen, setMenuOpen] = useState(false); // Estado para controlar o menu
+    const [menuOpen, setMenuOpen] = useState(false);
 
     const toggleMenu = () => {
-        setMenuOpen(!menuOpen); // Alterna entre abrir e fechar o menu
+        setMenuOpen(!menuOpen);
     };
 
     return (
@@ -117,11 +114,11 @@ const Header: React.FC = () => {
                         <Nav open={menuOpen}>
                             <StyledLink to="/">Home</StyledLink>
                             <StyledLink to="/sobre-nos">About</StyledLink>
+                            <StyledLink to="/recipe">Recipe</StyledLink>
                             <StyledLink to="/sobre-nos">Search</StyledLink>
                             <StyledLink to="/contato">Contato</StyledLink>
                         </Nav>
                         <HamburgerIcon onClick={toggleMenu}>
-                            {/* Ícone de 3 barras */}
                             <span></span>
                             <span></span>
                             <span></span>

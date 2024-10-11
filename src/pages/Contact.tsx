@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import ButtonGlobal from '../components/common/button-global';
 
 const ContainerContact = styled.section`
     display: flex;
@@ -36,21 +37,6 @@ const InfContact = styled.div`
         margin-inline-end: 0px;
         unicode-bidi: isolate;
         margin: 0 0 50px 0;
-    }
-`;
-
-const ConButton = styled.a`
-    text-decoration: none;
-    font-size: 12px;
-    background-color: var(--button-color-primary);
-    color: #fff;
-    
-    padding: 10px 30px;
-    border-radius: 30px;
-
-    &:hover{
-        background-color: var(--button-color-hover);
-        color: #fff;
     }
 `;
 
@@ -140,7 +126,8 @@ const Contact: React.FC = () => {
                 <InfContact>
                     <h1>Hello, what's on your mind?</h1>
                     <p>Credibly administrate market positioning deliverables rather than clicks-and-mortar methodologies. Proactively formulate out-of-the-box technology with clicks-and-mortar testing procedures. Uniquely promote leveraged web-readiness for standards compliant value. Rapidiously pontificate cooperative mindshare via maintainable applications.</p>
-                    <ConButton>Schedule a call</ConButton>
+                    <ButtonGlobal text="Schedule a call" toOrHref="/"/>
+
                 </InfContact>
                 <Formulario>
                     <form className="form" onSubmit={SendEmail}>
