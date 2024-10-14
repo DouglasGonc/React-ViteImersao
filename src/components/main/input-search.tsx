@@ -3,20 +3,20 @@ import SearchIcon from '../../assets/icons/search-icon';
 import { useState } from 'react';
 
 interface InputBarProps {
-    inputOpen: boolean;
+    $inputOpen: boolean;
 }
 
 const InputBar = styled.div<InputBarProps>`
     position: relative;
 
     input {
-        width: ${(props) => (props.inputOpen ? '200px' : '0px')};
-        padding: ${(props) => (props.inputOpen ? '8px 30px' : '8px 16px')};
-        border: 1px solid ${(props) => (props.inputOpen ? 'var(--button-color-primary)' : 'transparent')};
+        width: ${(props) => (props.$inputOpen ? '200px' : '0px')};
+        padding: ${(props) => (props.$inputOpen ? '8px 30px' : '8px 16px')};
+        border: 1px solid ${(props) => (props.$inputOpen ? 'var(--button-color-primary)' : 'transparent')};
         border-radius: 30px;
         transition: width 0.3s ease, padding 0.3s ease, border-color 0.3s ease;
         outline: none;
-        opacity: ${(props) => (props.inputOpen ? '1' : '0')};
+        opacity: ${(props) => (props.$inputOpen ? '1' : '0')};
     }
 
     .icon-container {
