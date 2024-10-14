@@ -66,7 +66,7 @@ const Button = styled.button`
 const FormEmail: React.FC = () => {
     return (
         <FormContainer>
-            <Input type="email" placeholder="Email Address" />
+            <Input type="email" id="emailtext" placeholder="Email Address" />
             <Button>Enviar</Button>
         </FormContainer>
     );

@@ -19,7 +19,7 @@ const StyledA = styled.a`
     }
 
     @media (max-width: 768px) {
-        padding: 10px 0;
+        padding: 10px 15;
     }
 `;
 

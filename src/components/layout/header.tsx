@@ -24,13 +24,11 @@ const Headerflex = styled.div`
 
     @media (max-width: 768px) {
         .secLeft {
-            width: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        .secReght {
-            display: none;
+        .secReght{       
         }
     }
 `;
@@ -44,12 +42,12 @@ const LogoH = styled.div`
     }
 `;
 
-const Nav = styled.nav<{ open: boolean }>` // Adicionamos a tipagem aqui
+const Nav = styled.nav<{ open: boolean }>`
     display: flex;
     justify-content: space-around;
 
     @media (max-width: 768px) {
-        display: ${(props) => (props.open ? 'flex' : 'none')}; /* Mostra o menu se o estado open for true */
+        display: ${(props) => (props.open ? 'flex' : 'none')};
         flex-direction: column;
         position: absolute;
         top: 80px;
@@ -93,6 +91,7 @@ const HamburgerIcon = styled.div`
 
     @media (max-width: 768px) {
         display: flex;
+        margin: 52px 0 52px 15px;
     }
 `;
 
@@ -118,15 +117,15 @@ const Header: React.FC = () => {
                             <StyledLink to="/sobre-nos">Search</StyledLink>
                             <StyledLink to="/contato">Contato</StyledLink>
                         </Nav>
-                        <HamburgerIcon onClick={toggleMenu}>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </HamburgerIcon>
                     </div>
                 </section>
                 <section className='secReght'>
                     <LoginBar />
+                    <HamburgerIcon onClick={toggleMenu}>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </HamburgerIcon>
                 </section>
             </Headerflex>
         </HeaderContainer>

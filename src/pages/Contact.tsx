@@ -133,6 +133,7 @@ const Contact: React.FC = () => {
                     <form className="form" onSubmit={SendEmail}>
                         <p>Nome</p>
                         <input 
+                            id="gtavi"
                             className="input"
                             type="text"
                             onChange={(e) => setName(e.target.value)}

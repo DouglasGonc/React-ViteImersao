@@ -46,12 +46,13 @@ const LoginBar = () => {
     };
 
     return (
-        <InputBar inputOpen={inputOpen}>
+        <InputBar $inputOpen={inputOpen}>
             <input 
                 type="text" 
                 value={inputValue} 
                 onChange={(e) => setInputValue(e.target.value)} 
                 placeholder="Pesquisar..."
+                id="texto"
             />
             <div className="icon-container" onClick={toggleInput}>
                 <SearchIcon size={18} color="#4a4a4a" />
